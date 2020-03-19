@@ -12,7 +12,7 @@ public class Exercicio1 {
     public void executeAllDfs(){
         for(Node node : graph) {
 
-            System.out.print("NODE DATA " + node.data + " ");
+//            System.out.print("NODE DATA " + node.data + " ");
             dfs(node);
             for(Node n: graph){
                 n.visited = false;
@@ -29,7 +29,7 @@ public class Exercicio1 {
     {
         _nodeValue = node.data;
 
-        System.out.print("NODE DATA " + node.data + " ");
+//        System.out.print("NODE DATA " + node.data + " ");
         List<Node> neighbours = node.getNeighbours();
         node.visited = true;
 //        System.out.println("NEIGHBOURS SIZE " + neighbours.size());
@@ -45,8 +45,8 @@ public class Exercicio1 {
                 thisPath--;
             }
         }
-        System.out.println("THISPATH " + thisPath);
-        System.out.println("LONGESTPATH " + longestPath + "\n");
+//        System.out.println("THISPATH " + thisPath);
+//        System.out.println("LONGESTPATH " + longestPath + "\n");
         if(longestPath < thisPath) {
             longestPath = thisPath;
         }
@@ -186,12 +186,12 @@ public class Exercicio1 {
         Scanner sChar = new Scanner(System.in);
         for (int i = 0; i < row; i++) {
             for(int j = 0; j < column; j++) {
-                System.out.println("Enter values for [" + i + "][" + j + "]");
+//                System.out.println("Enter values for [" + i + "][" + j + "]");
                 map[i][j] = sChar.next().charAt(0);
             }
         }
-        sChar.close();
-        printMatrix(map);
+//        sChar.close();
+//        printMatrix(map);
         return map;
     }
 
@@ -202,11 +202,11 @@ public class Exercicio1 {
         boolean close = false;
 
         Scanner sInt = new Scanner(System.in);
-        //while(!close) {
+        while(!close) {
 
-            System.out.println("Enter the value for number of rows");
+//            System.out.println("Enter the value for number of rows");
             int row = sInt.nextInt();
-            System.out.println("Enter the value for number of columns");
+//            System.out.println("Enter the value for number of columns");
             int column = sInt.nextInt();
             if(row == 0 && column == 0) {
                 close = true;
@@ -214,8 +214,8 @@ public class Exercicio1 {
 
             char [][] arr = maze.readCharsFromCommandLine(row, column);
             maze.mazeSearch(arr);
-        //}
-
+        }
+        sInt.close();
 
     }
 
